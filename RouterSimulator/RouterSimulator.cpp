@@ -34,7 +34,7 @@ int main()
 {
 	Router router;
 
-	
+	std::cout << router;
 
 
 

@@ -97,7 +97,7 @@ std::string Interface::getType()
 
 std::ostream& operator << (std::ostream& os, Interface& iface)
 {
-	os << "Name: " << iface._name << " - Type: " << iface._type << " - Status: " << 
+	os << "Interface -- Name: " << iface._name << " - Type: " << iface._type << " - Status: " << 
 		(iface._status == 0 ? "Disconnected. " : "Connected. ") << " - IP Address: " << 
 		iface._ip << " - MAC Address: " << iface._mac << std::endl;
 

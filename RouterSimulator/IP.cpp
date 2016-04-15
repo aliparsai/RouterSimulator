@@ -88,7 +88,7 @@ void IP::generateRandomIP(int byteNumber)
 
 	for (int i = 3; i >= 4 - byteNumber && i >= 0; i--)
 	{
-		addressRandom[i] = rand() % 256;
+		addressRandom[i] = rand() % 252 + 3;
 	}
 
 	setAddress(addressRandom);
