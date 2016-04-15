@@ -40,6 +40,6 @@ public:
 	
 	virtual void autoAssignName(int number);
 
-	
+	friend std::ostream& operator << (std::ostream& os, Interface& iface);
 };
 

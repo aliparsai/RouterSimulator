@@ -171,6 +171,9 @@
     <ClCompile Include="Wireless.cpp" />
     <ClCompile Include="WirelessNode.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RouterSimulatorClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
