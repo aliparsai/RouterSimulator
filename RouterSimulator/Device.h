@@ -12,6 +12,16 @@ public:
 	Device();
 	~Device();
 	void addInterface(Interface & in);
+
+	void setName(std::string name);
+
+	std::string getName();
+
+	void setType(std::string type);
+
+	std::string getType();
+
+	int getFreeInterface(std::string type);
 	
 };
 

@@ -73,9 +73,23 @@ void Interface::operator= (Interface & in)
 	_status = in._status;
 }
 
-void Interface::connect(Interface *externalInterface)
+void Interface::connect(Interface *externalInterface, bool firstTimeFlag = true)
 {
 	connectedInterface = externalInterface;
 	_status = 1;
 
+	if (firstTimeFlag) 
+		externalInterface->connect(this, false);
+
+}
+
+
+void Interface::setType(std::string type)
+{
+	_type = type;
+}
+
+std::string Interface::getType()
+{
+	return _type;
 }

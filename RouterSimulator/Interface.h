@@ -32,9 +32,12 @@ public:
 
 	void operator=(Interface & in);
 
-	void connect(Interface * externalInterface);
+	void connect(Interface * externalInterface, bool firstTimeFlag);
 
+	void setType(std::string type);
 
+	std::string getType();
+	
 	virtual void autoAssignName(int number);
 
 	
