@@ -2,10 +2,23 @@
 //
 
 #include "stdafx.h"
-
+#include "IP.h"
+#include "MAC.h"
 
 int main()
 {
-    return 0;
+	IP ip;
+	MAC mac;
+
+	//std::cin >> ip;
+	//std::cout << "Entered IP: " << ip;
+
+
+	std::cin >> mac;
+	std::cout << "Entered MAC: " << mac;
+
+
+	
+	return 0;
 }
 

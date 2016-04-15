@@ -33,16 +33,16 @@ int MAC::hex2int(char hexChar)
 
 void MAC::setComponentText(int componentNumber, char* text)
 {
-	address[componentNumber] = (char16_t) hex2int(text[0]) * 16 + hex2int(text[1]);
+	_address[componentNumber] = (int) hex2int(text[0]) * 16 + hex2int(text[1]);
 }
 
 
-char* MAC::getComponentText(int componentNumber)
+std::string MAC::getComponentText(int componentNumber)
 {
-	char text[2];
-	
-	text[0] = int2hex((address[componentNumber] / 16));
-	text[1] = int2hex((address[componentNumber] % 16));
+	std::string text = "??";
+
+	text[0] = int2hex(_address[componentNumber] / 16);
+	text[1] = int2hex(_address[componentNumber] % 16);
 
 	return text;
 }
@@ -50,7 +50,7 @@ char* MAC::getComponentText(int componentNumber)
 MAC::MAC()
 {
 	for (int i = 0; i < 6; i++)
-		address[i] = 0;
+		_address[i] = 0;
 }
 
 
@@ -59,16 +59,16 @@ MAC::~MAC()
 }
 
 
-void MAC::setAddress(char16_t addressComponents[6])
+void MAC::setAddress(int addressComponents[6])
 {
 	for (int i = 0; i < 6; i++)
-		address[i] = addressComponents[i];
+		_address[i] = addressComponents[i];
 }
 
-void MAC::getAddress(char16_t* addressComponents)
+void MAC::getAddress(int* addressComponents)
 {
 	for (int i = 0; i < 6; i++)
-		addressComponents[i] = address[i];
+		addressComponents[i] = _address[i];
 }
 
 std::ostream& operator << (std::ostream& os, MAC& mac)
