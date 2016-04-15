@@ -12,6 +12,7 @@ public:
 	void setAddress(int* addressComponents);
 	void getAddress(int* addressComponents);
 	void operator=(IP & ip);
+	void generateRandomIP(int byteNumber);
 	friend std::ostream& operator << (std::ostream& os, IP& ip);
 	friend std::istream& operator >> (std::istream& is, IP& ip);
 

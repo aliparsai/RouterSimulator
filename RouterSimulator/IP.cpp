@@ -79,3 +79,17 @@ void IP::operator= (IP &ip)
 	ip.getAddress(tmpAddress);
 	setAddress(tmpAddress);
 }
+
+
+void IP::generateRandomIP(int byteNumber)
+{
+	srand(time(NULL));
+	int addressRandom[4];
+
+	for (int i = 3; i >= 4 - byteNumber && i >= 0; i--)
+	{
+		addressRandom[i] = rand() % 256;
+	}
+
+	setAddress(addressRandom);
+}

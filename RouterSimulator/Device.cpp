@@ -56,3 +56,15 @@ int Device::getFreeInterface(std::string type = "")
 
 	return -1;
 }
+
+int Device::getInterfaceByName(std::string name)
+{
+
+	for (int i = 0; i < interfaceList.size(); i++)
+	{
+		if (interfaceList[i].getName() == name)
+			return i;
+	}
+
+	return -1;
+}

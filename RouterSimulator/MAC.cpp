@@ -59,7 +59,7 @@ MAC::~MAC()
 }
 
 
-void MAC::setAddress(int addressComponents[6])
+void MAC::setAddress(int* addressComponents)
 {
 	for (int i = 0; i < 6; i++)
 		_address[i] = addressComponents[i];
@@ -105,3 +105,16 @@ std::istream& operator >> (std::istream& is, MAC& mac)
 	return is;
 }
 
+
+void MAC::generateRandomMAC()
+{
+	srand(time(NULL));
+	int addressRandom[6];
+
+	for (int i = 0; i < 6; i++)
+	{
+		addressRandom[i] = rand() % 256;
+	}
+
+	setAddress(addressRandom);
+}

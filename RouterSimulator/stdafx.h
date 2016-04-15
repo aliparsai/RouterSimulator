@@ -7,10 +7,11 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
-#include <tchar.h>
 #include <iostream>
 #include <string>
 #include <sstream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
+
 // TODO: reference additional headers your program requires here

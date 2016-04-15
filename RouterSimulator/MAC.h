@@ -10,9 +10,10 @@ private:
 public:
 	MAC();
 	~MAC();
-	void setAddress(int addressComponents[6]);
+	void setAddress(int * addressComponents);
 	void getAddress(int * addressComponents);
 	void operator=(MAC &mac);
+	void generateRandomMAC();
 	friend std::ostream& operator<<(std::ostream& os, MAC& mac);
 	friend std::istream& operator>>(std::istream& is, MAC& mac);
 };

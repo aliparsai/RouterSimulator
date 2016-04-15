@@ -6,8 +6,8 @@ WiredNode::WiredNode()
 {
 	_name = "dummy";
 	_type = "wired";
-	Ethernet in;
-	addInterface(in);
+	Ethernet *in = new Ethernet[1];
+	addInterface(*in);
 }
 
 

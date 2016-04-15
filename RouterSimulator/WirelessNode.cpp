@@ -6,8 +6,8 @@ WirelessNode::WirelessNode()
 {
 	_name = "dummy";
 	_type = "wireless";
-	Wireless in;
-	addInterface(in);
+	Wireless *in = new Wireless[1];
+	addInterface(*in);
 }
 
 

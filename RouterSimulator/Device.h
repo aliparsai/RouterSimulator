@@ -22,6 +22,8 @@ public:
 	std::string getType();
 
 	int getFreeInterface(std::string type);
+
+	int getInterfaceByName(std::string name);
 	
 };
 
