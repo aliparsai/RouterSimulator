@@ -6,5 +6,6 @@ class Ethernet :
 public:
 	Ethernet();
 	~Ethernet();
+	void autoAssignName(int number);
 };
 

@@ -6,5 +6,6 @@ class Wireless :
 public:
 	Wireless();
 	~Wireless();
+	void autoAssignName(int number);
 };
 

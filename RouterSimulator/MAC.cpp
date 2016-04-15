@@ -71,6 +71,13 @@ void MAC::getAddress(int* addressComponents)
 		addressComponents[i] = _address[i];
 }
 
+void MAC::operator=(MAC & mac)
+{
+	int tmpAddress[6];
+	mac.getAddress(tmpAddress);
+	setAddress(tmpAddress);
+}
+
 std::ostream& operator << (std::ostream& os, MAC& mac)
 {
 	for (int i = 0; i < 5; i++)

@@ -71,3 +71,12 @@ std::istream& operator >> (std::istream& is, IP& ip)
 	
 	return is;
 }
+
+
+void IP::operator= (IP &ip)
+{
+	int tmpAddress[4];
+	ip.getAddress(tmpAddress);
+	setAddress(tmpAddress);
+
+}

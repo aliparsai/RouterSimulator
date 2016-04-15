@@ -12,7 +12,7 @@ public:
 	~MAC();
 	void setAddress(int addressComponents[6]);
 	void getAddress(int * addressComponents);
+	void operator=(MAC &mac);
 	friend std::ostream& operator<<(std::ostream& os, MAC& mac);
 	friend std::istream& operator>>(std::istream& is, MAC& mac);
 };
-
