@@ -8,6 +8,7 @@ Interface::Interface()
 {
 	_name = "dummy";
 	_type = "generic";
+	_status = 0;
 }
 
 
@@ -51,4 +52,30 @@ void Interface::autoAssignName(int number)
 	std::ostringstream os;
 	os << "int" << number;
 	_name = os.str();
+}
+
+void Interface::setStatus(int status)
+{
+	_status = status;
+}
+
+int Interface::getStatus()
+{
+	return _status;
+}
+
+void Interface::operator= (Interface & in)
+{
+	_mac = in._mac;
+	_ip = in._ip;
+	_name = in._name;
+	_type = in._type;
+	_status = in._status;
+}
+
+void Interface::connect(Interface *externalInterface)
+{
+	connectedInterface = externalInterface;
+	_status = 1;
+
 }

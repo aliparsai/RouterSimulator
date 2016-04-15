@@ -1,4 +1,6 @@
 #pragma once
+#include "IP.h"
+#include "MAC.h"
 
 class Interface
 {
@@ -7,9 +9,12 @@ protected:
 	std::string _type;
 	IP _ip;
 	MAC _mac;
-
+	int _status;
+	
 	
 public:
+	Interface *connectedInterface;
+
 	Interface();
 	~Interface();
 
@@ -22,7 +27,16 @@ public:
 	MAC getMAC();
 	void setMAC(MAC mac);
 
+	void setStatus(int status);
+	int getStatus();
+
+	void operator=(Interface & in);
+
+	void connect(Interface * externalInterface);
+
+
 	virtual void autoAssignName(int number);
 
+	
 };
 

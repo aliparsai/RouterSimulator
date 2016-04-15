@@ -78,5 +78,4 @@ void IP::operator= (IP &ip)
 	int tmpAddress[4];
 	ip.getAddress(tmpAddress);
 	setAddress(tmpAddress);
-
 }

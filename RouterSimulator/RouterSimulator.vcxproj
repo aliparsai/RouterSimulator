@@ -141,7 +141,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Connection.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="Ethernet.h" />
     <ClInclude Include="Interface.h" />
@@ -152,7 +151,6 @@
     <ClInclude Include="Wireless.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Connection.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="Ethernet.cpp" />
     <ClCompile Include="Interface.cpp" />
