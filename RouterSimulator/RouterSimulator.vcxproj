@@ -141,6 +141,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandLineInterface.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="Ethernet.h" />
     <ClInclude Include="Interface.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="WirelessNode.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CommandLineInterface.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="Ethernet.cpp" />
     <ClCompile Include="Interface.cpp" />

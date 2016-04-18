@@ -12,20 +12,7 @@
 #include "WirelessNode.h"
 #include "Router.h"
 
-void menuDevice(Device *device)
-{
 
-}
-
-void menuInterface(Interface *iface)
-{
-
-}
-
-void menuRouter(Router *router)
-{
-
-}
 
 
 
